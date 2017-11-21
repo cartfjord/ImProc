@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.8)
+project( ExampleCode )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( ExampleCode ExampleCode.cpp )
+target_link_libraries( ExampleCode ${OpenCV_LIBS} )
+
+project( imgprocessing )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( imgprocessing imgprocessing.cpp )
+target_link_libraries( imgprocessing ${OpenCV_LIBS} )
